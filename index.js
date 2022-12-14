@@ -8,6 +8,7 @@ import session from 'express-session';
 // Controllers
 import SessionController from './controllers/sessions/session-controller.js';
 import UsersController from "./controllers/users/users-controller.js";
+import CommentController from './controllers/comments/ccomments-controller.js';
 
 // connect to DB -- need to be ENV var.
 const connection = "mongodb+srv://woodhamsbd:Sandybeach2013@cs5610final.xipswow.mongodb.net/?retryWrites=true&w=majority";
@@ -32,6 +33,7 @@ app.use(express.json());
 // Implement Controllers
 SessionController(app)
 UsersController(app)
+CommentController(app)
 
 // Fire it up
 
